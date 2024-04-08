@@ -1,0 +1,176 @@
+/* FONTS */
+
+/* dancing-script-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Dancing Script';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/dancing-script-v25-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  
+/* dancing-script-500 - latin */
+@font-face {
+font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+font-family: 'Dancing Script';
+font-style: normal;
+font-weight: 500;
+src: url('./fonts/dancing-script-v25-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* dancing-script-600 - latin */
+@font-face {
+font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+font-family: 'Dancing Script';
+font-style: normal;
+font-weight: 600;
+src: url('./fonts/dancing-script-v25-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* dancing-script-700 - latin */
+@font-face {
+font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+font-family: 'Dancing Script';
+font-style: normal;
+font-weight: 700;
+src: url('./fonts/dancing-script-v25-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* roboto-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/roboto-v30-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  
+  /* roboto-500 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: url('./fonts/roboto-v30-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  
+  /* roboto-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./fonts/roboto-v30-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  
+  /* roboto-900 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    src: url('./fonts/roboto-v30-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  
+  
+/* ----------------------------------------------- */
+
+/* COLOR VARIABLES */
+
+:root {
+    --gold-color: rgb(243, 221, 96);
+    --default-text: #fff;
+}
+
+
+/* ------------------------- */
+
+body {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+
+    display: grid;
+    grid-template-rows: 110px 1fr 50px;
+    grid-template-columns: 1fr;
+    grid-template-areas: '.'
+               'body'
+               'footer';
+    gap: 30px
+}
+
+.transparent-bg {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.712);
+}
+
+
+
+/* HEADER */ 
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo-image {
+    width: auto;
+    height: 90px;
+
+    border-radius: 10px;
+    background-color: url(images/logo.png);
+}
+
+header nav {
+    display: flex;
+    width: clamp(350px, 50%, 600px);
+    border-radius: 10px;
+
+
+    justify-content: space-around;
+}
+
+.nav-button {
+    padding: 5px;
+    border: 0px;
+    border-radius: 5px;
+    letter-spacing: 2px;
+
+    text-shadow: 0 15px var(--gold-color);
+
+    font-weight: 500;
+    color: var(--default-text);
+    background-color: #00000000;
+
+    transition: 0.3s;
+}
+.nav-button:hover{
+    color: var(--gold-color);
+    transform: scale(1.1);
+    text-shadow: none;
+}
+
+
+/* ----------------- */ 
+
+/* FOOTER  */
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--default-text);
+    font-weight: 500;
+}
+
+.footer a {
+    color: rgb(180, 253, 255);
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* ------------------- */
