@@ -2,11 +2,15 @@
 import './reset.css'
 import './common.css'
 
-import Logo from './images/logo.png';
-let logo = document.querySelector('.logo-image');
-logo.src = Logo;
-
 import background from './images/backgroundimage.jpg'
 document.body.style.backgroundImage = `url(${background})`;
 document.body.style.backgroundSize = 'cover';
 /* ----------- */
+
+// GET CONTAINER ELEMENT
+let contentContainer = document.body.querySelector('#content');
+
+/* HOME PAGE */
+import './homepage.css';
+import homepage from './homepage.js';
+contentContainer.appendChild(homepage())

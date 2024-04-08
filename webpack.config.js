@@ -7,6 +7,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Restaurant Page',
+      favicon: "./src/images/favicon.svg",
       template: './src/index.html',
     }),
   ],
@@ -31,7 +32,7 @@ module.exports = {
   },
   output: {
     filename: 'main.js',
-    publicPath: '/',
+    publicPath: './',
     path: path.resolve(__dirname, 'dist'),
   },
 };

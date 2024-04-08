@@ -92,10 +92,9 @@ body {
     display: grid;
     grid-template-rows: 110px 1fr 50px;
     grid-template-columns: 1fr;
-    grid-template-areas: '.'
+    grid-template-areas: 'header'
                'body'
                'footer';
-    gap: 30px
 }
 
 .transparent-bg {
@@ -107,21 +106,34 @@ body {
 
 /* HEADER */ 
 
-header {
+.header-container {
+    grid-area: header;
+
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
+.logo {
+    font-family: 'dancing script';
+    font-size: 1.5em;
+    color: var(--gold-color);
 
-.logo-image {
-    width: auto;
-    height: 90px;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    text-align: center;
 
-    border-radius: 10px;
-    background-color: url(images/logo.png);
+}
+.logo svg {
+    fill: var(--gold-color);
+    margin-right: 10px;
+}
+.logo h1 span {
+    font-size: 1.5em;
 }
 
-header nav {
+
+.header-container nav {
     display: flex;
     width: clamp(350px, 50%, 600px);
     border-radius: 10px;
@@ -145,13 +157,22 @@ header nav {
     transition: 0.3s;
 }
 .nav-button:hover{
+    cursor: pointer;
     color: var(--gold-color);
     transform: scale(1.1);
     text-shadow: none;
 }
 
 
-/* ----------------- */ 
+/* ----------------- */
+
+#content {
+    padding: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* FOOTER  */
 
@@ -171,6 +192,5 @@ header nav {
 .footer a:hover {
     text-decoration: underline;
 }
-
 
 /* ------------------- */
