@@ -1,11 +1,7 @@
 export default function createPage() {
-    // Create container div
-    let container = document.createElement('div');
-    container.classList.add("homepage");
+    let test = document.createElement('h1');
+    test.classList.add("test")
+    test.textContent = "xDDDD"
 
-    let header = document.createElement('h1');
-    header.textContent = ""
-
-    container.appendChild(header);
-    return container;
-};
+    return test;
+}

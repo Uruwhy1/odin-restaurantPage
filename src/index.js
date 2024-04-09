@@ -12,5 +12,11 @@ let contentContainer = document.body.querySelector('#content');
 
 /* HOME PAGE */
 import './homepage.css';
-import homepage from './homepage.js';
-contentContainer.appendChild(homepage())
+import homepage from './homepage.js'
+contentContainer.appendChild(homepage());
+
+
+/* ABOUT PAGE */
+import './about.css';
+import about from './about.js';
+// contentContainer.appendChild(about())
