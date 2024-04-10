@@ -33,8 +33,7 @@ import contactModule from './contact.js';
 /* EVENT LISTENERS */
 
 document.addEventListener('DOMContentLoaded', (event) => {
-    contentContainer.appendChild(homepageModule());
-    console.log('test')
+    animateContent(homepageModule(), 3);
 })
 
 homeButton.addEventListener('click', (event) => {
@@ -68,16 +67,29 @@ contactButton.addEventListener('click', (event) => {
 /* ------------------------- */
 
 
-function animateContent(container) {
+function animateContent(container, duration) {
     container.style.opacity = "0"
-    setTimeout(() => {
-        container.style.animation = "fade-in 1s 1"
-    }, 1);
+    if(!duration) {
+        setTimeout(() => {
+            container.style.animation = "fade-in 1.5s 1"
+        }, 1); 
 
-    setTimeout(() => {
-        container.style.animation = "none"
-        container.style.opacity = "1"
-    }, 900);
+        setTimeout(() => {
+            container.style.animation = "none"
+            container.style.opacity = "1"
+        }, 900);
+
+    } else {
+        setTimeout(() => {
+            container.style.animation = `fade-in ${duration}s 1`
+        }, 1); 
+
+        setTimeout(() => {
+            container.style.animation = "none"
+            container.style.opacity = "1"
+        }, 2900);
+    }
 
     contentContainer.appendChild(container);
+    
 }
