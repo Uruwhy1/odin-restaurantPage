@@ -1,7 +1,13 @@
 export default function createPage() {
-    let test = document.createElement('h1');
-    test.classList.add("test")
-    test.textContent = "xDDDD"
+    let container = document.createElement('div');
+    container.classList.add("homepage-container")
+    container.classList.add("transparent-bg")
+    container.textContent = "Welcome to our restaurant"
 
-    return test;
+    let button = document.createElement('button');
+    button.textContent = "ORDER NOW"
+
+    container.appendChild(button)
+
+    return container;
 }

@@ -1,0 +1,54 @@
+
+.menu-container {
+    border-radius: 0px;
+    padding: 30px 100px;
+    width: fit-content;
+    height: fit-content;
+
+    display: grid;
+    place-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+
+
+    font-size: 1.2em;
+
+}
+
+.menu-container h1 {
+    margin: auto;
+    justify-self: start;
+    margin-bottom: 20px;
+}
+
+.menu-container p {
+    margin: 10px 0;
+    text-align: center;
+    color: var(--default-text);
+    font-weight: 700;
+}
+
+.menu-container ul {
+    width: 300px;
+}
+
+.menu-container li {
+    color: var(--default-text);
+    width: 100%;
+
+    display: flex;
+    justify-items: stretch;
+
+    margin-bottom: 2px;
+}
+.menu-container li:hover {
+    color: var(--gold-color);
+    font-weight: 600;
+}
+
+.price {
+    color: var(--gold-color);
+    font-weight: 500;
+
+    margin-left: auto;
+}

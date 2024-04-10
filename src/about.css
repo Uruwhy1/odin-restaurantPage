@@ -24,11 +24,8 @@
     border-radius: 5px;
 }
 
-.header {
-    font-family: 'Dancing Script', cursive;
-    margin: auto;
-    font-weight: 700;
-    color: var(--gold-color);
+.homepage h1 {
+    padding-top: 15px;
 }
 
 /* REVIEWS STUFF */
@@ -104,12 +101,13 @@
 
     font-weight: 700;
     font-size: 18px;
-    color: var(--gold-color);
+    color: #fff;
 
     transition: 0.3s;
 }
 .profile-container svg {
     margin-top: 2px;
+    color: var(--gold-color);
 }
 
 /* SCHEDULE STUFF */

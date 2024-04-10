@@ -75,13 +75,23 @@ src: url('./fonts/dancing-script-v25-latin-700.woff2') format('woff2'); /* Chrom
   
 /* ----------------------------------------------- */
 
-/* COLOR VARIABLES */
+/* VARIABLES AND ANIMATIONS */
 
 :root {
     --gold-color: rgb(243, 221, 96);
     --default-text: #fff;
 }
 
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        backdrop-filter: blur(0px);
+    }
+    100% {
+        opacity: 1;
+        backdrop-filter: blur(10px);
+    }
+}
 
 /* ------------------------- */
 
@@ -89,19 +99,32 @@ body {
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
 
+    background-color: #131313;
+
     display: grid;
     grid-template-rows: 110px 1fr 50px;
     grid-template-columns: 1fr;
     grid-template-areas: 'header'
                'body'
                'footer';
+               
 }
 
 .transparent-bg {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.712);
+    backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+
 }
 
+
+.header {
+    font-family: 'Dancing Script', cursive;
+    margin: auto;
+    font-weight: 700;
+    color: var(--gold-color);
+    font-size: 2.1em;
+}
 
 
 /* HEADER */ 
@@ -112,6 +135,8 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    border-bottom: 2px solid var(--gold-color);
 }
 .logo {
     font-family: 'dancing script';
@@ -148,6 +173,7 @@ body {
     border-radius: 5px;
     letter-spacing: 2px;
 
+    --gold-color: rgba(243, 221, 96, 0.4);
     text-shadow: 0 15px var(--gold-color);
 
     font-weight: 500;
@@ -157,6 +183,8 @@ body {
     transition: 0.3s;
 }
 .nav-button:hover{
+    --gold-color: rgba(243, 221, 96, 1);
+    
     cursor: pointer;
     color: var(--gold-color);
     transform: scale(1.1);
@@ -183,6 +211,13 @@ body {
 
     color: var(--default-text);
     font-weight: 500;
+
+    border-top: 2px solid var(--gold-color);
+
+    opacity: 0;
+    animation: fade-in 1s ease-in-out forwards;
+    animation-delay: 0.5;
+
 }
 
 .footer a {
